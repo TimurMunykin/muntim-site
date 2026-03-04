@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-FILE="site/index.html"
+FILE="index.html"
 
 if ! grep -q "Hero" "$FILE"; then
   echo "Missing Hero section"

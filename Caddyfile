@@ -1,5 +1,0 @@
-muntim.ru, www.muntim.ru {
-    root * /srv
-    encode zstd gzip
-    file_server
-}

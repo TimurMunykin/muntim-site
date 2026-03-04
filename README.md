@@ -2,37 +2,45 @@
 
 Static personal landing for `muntim.ru`.
 
-## Local run
+## Stack
 
-```bash
-docker compose up -d
-docker compose ps
-```
+- Static files: `index.html`, `styles.css`, `app.js`
+- Hosting: GitHub Pages
+- Domain: `muntim.ru` (custom domain via `CNAME` file)
 
-Open `http://localhost`.
+## Local check
 
-## Stop
-
-```bash
-docker compose down
-```
-
-## Smoke checks
+Open `index.html` in browser and run smoke checks:
 
 ```bash
 bash scripts/smoke-check.sh
 ```
 
-## Production notes (HTTPS)
+## GitHub Pages setup
 
-- DNS `A` record for `muntim.ru` (and optionally `www.muntim.ru`) should point to server IP.
-- Ports `80` and `443` must be open.
-- Caddy container requests and renews TLS certificates automatically.
+1. Repository -> `Settings` -> `Pages`.
+2. `Source`: `Deploy from a branch`.
+3. `Branch`: `master` (or `main`), folder: `/ (root)`.
+4. Wait until Pages publishes the site.
 
-## Deploy
+## DNS for custom domain
+
+- Keep `bloodyssey.muntim.ru` DNS records untouched.
+- Point apex domain to GitHub Pages IPs:
+  - `185.199.108.153`
+  - `185.199.109.153`
+  - `185.199.110.153`
+  - `185.199.111.153`
+- Optional `www` alias:
+  - `CNAME` `www` -> `TimurMunykin.github.io`
+
+## HTTPS
+
+- GitHub Pages issues TLS certificate automatically after DNS propagation.
+- Then enable `Enforce HTTPS` in Pages settings.
+
+## Required content check
 
 ```bash
-docker compose pull
-docker compose up -d --force-recreate
 bash scripts/smoke-check.sh
 ```
