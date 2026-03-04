@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Muntim - Projects</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero" id="hero">
+      <p class="kicker">Muntim</p>
+      <h1>Hero</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua.
+      </p>
+      <div class="hero-actions">
+        <a class="btn" href="#projects">Projects</a>
+        <a class="btn ghost" href="#contacts">Contacts</a>
+      </div>
+    </header>
+
+    <main>
+      <section id="projects">
+        <h2>Projects</h2>
+        <div class="filters" aria-label="Project filters">
+          <button class="filter active" data-filter="all" type="button">All</button>
+          <button class="filter" data-filter="personal" type="button">Personal</button>
+          <button class="filter" data-filter="team" type="button">Team</button>
+        </div>
+
+        <div class="grid">
+          <article class="card" data-type="personal">
+            <h3>Bloodyssey</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+              posuere erat a ante.
+            </p>
+            <p><strong>Type:</strong> Personal</p>
+            <p><strong>Status:</strong> Production</p>
+            <a href="https://bloodyssey.muntim.ru/" target="_blank" rel="noreferrer">Open project</a>
+          </article>
+
+          <article class="card" data-type="personal">
+            <h3>Lorem Personal One</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p><strong>Type:</strong> Personal</p>
+            <p><strong>Status:</strong> In progress</p>
+          </article>
+
+          <article class="card" data-type="team">
+            <h3>Lorem Team Project</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p><strong>Type:</strong> Team</p>
+            <p><strong>Status:</strong> Archived</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="about">
+        <h2>About</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
+        </p>
+      </section>
+
+      <section id="contacts">
+        <h2>Contacts</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <ul>
+          <li>Telegram: @loremipsum</li>
+          <li>Email: lorem@example.com</li>
+          <li>GitHub: github.com/loremipsum</li>
+        </ul>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
