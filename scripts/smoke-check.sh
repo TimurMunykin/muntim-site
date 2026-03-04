@@ -3,33 +3,33 @@ set -euo pipefail
 
 FILE="index.html"
 
-if ! grep -q "Hero" "$FILE"; then
-  echo "Missing Hero section"
+if ! grep -q "Timur Munykin" "$FILE"; then
+  echo "Missing name"
   exit 1
 fi
 
-if ! grep -q "Projects" "$FILE"; then
-  echo "Missing Projects section"
+if ! grep -q "projects/" "$FILE"; then
+  echo "Missing projects section"
   exit 1
 fi
 
-if ! grep -q "About" "$FILE"; then
-  echo "Missing About section"
+if ! grep -q "skills.txt" "$FILE"; then
+  echo "Missing skills section"
   exit 1
 fi
 
-if ! grep -q "Contacts" "$FILE"; then
-  echo "Missing Contacts section"
-  exit 1
-fi
-
-if ! grep -q "Lorem ipsum" "$FILE"; then
-  echo "Missing placeholder text"
+if ! grep -q "links.txt" "$FILE"; then
+  echo "Missing links section"
   exit 1
 fi
 
 if ! grep -q "https://bloodyssey.muntim.ru/" "$FILE"; then
   echo "Missing Bloodyssey link"
+  exit 1
+fi
+
+if ! grep -q "https://github.com/TimurMunykin" "$FILE"; then
+  echo "Missing GitHub link"
   exit 1
 fi
 

@@ -1,10 +1,10 @@
 # muntim-site
 
-Static personal landing for `muntim.ru`.
+Personal landing page for `muntim.ru`. Pure HTML, no CSS, no JS — terminal-style ASCII art.
 
 ## Stack
 
-- Static files: `index.html`, `styles.css`, `app.js`
+- Single file: `index.html`
 - Hosting: GitHub Pages
 - Domain: `muntim.ru` (custom domain via `CNAME` file)
 
@@ -33,14 +33,3 @@ bash scripts/smoke-check.sh
   - `185.199.111.153`
 - Optional `www` alias:
   - `CNAME` `www` -> `TimurMunykin.github.io`
-
-## HTTPS
-
-- GitHub Pages issues TLS certificate automatically after DNS propagation.
-- Then enable `Enforce HTTPS` in Pages settings.
-
-## Required content check
-
-```bash
-bash scripts/smoke-check.sh
-```
