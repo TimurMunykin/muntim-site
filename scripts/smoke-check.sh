@@ -23,7 +23,7 @@ if ! grep -q "links.txt" "$FILE"; then
   exit 1
 fi
 
-if ! grep -q "https://bloodyssey.muntim.ru/" "$FILE"; then
+if ! grep -q "https://bloodyssey.maui.muntim.ru/" "$FILE"; then
   echo "Missing Bloodyssey link"
   exit 1
 fi
